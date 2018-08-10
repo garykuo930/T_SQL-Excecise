@@ -49,12 +49,14 @@ delete item where isbn = 10101
 --------------------------------------------------------------------------------------
 --Write a query that retrieves the last name of member number 507 in the member table. 
 --------------------------------------------------------------------------------------
+use Library
 select lastname
 from member
 where member_no = 507
 --------------------------------------------------------------------------------------
 --Write a query that changes the last name of member number 507 in the member table to a different one of your choice. 
 --------------------------------------------------------------------------------------
+use Library
 update member
 	set lastname = 'Connor'
 	where member_no = 507
@@ -64,6 +66,7 @@ update member
 --新增滿十八歲的會員：
 --Review and execute the \Labfiles\L07\AddJuvenile.sql script file to add a new juvenile member to the library database. 
 --------------------------------------------------------------------------------------
+use Library
 insert [dbo].[adult]
 select juvenile.[member_no],[street],[city],[state],[zip],[phone_no],dateadd(YY,1,getdate())
 from [dbo].[adult]
@@ -71,4 +74,13 @@ join [dbo].[juvenile]
 on adult.member_no = juvenile.adult_member_no
 --select * from juvenile
 where GETDATE() > DATEADD( YY, 18, [birth_date] )
+--------------------------------------------------------------------------------------
+--刪除重複的會員
+--------------------------------------------------------------------------------------
+use Library
+delete from [dbo].[juvenile]
+--select *
+from [dbo].[juvenile]
+join [dbo].[adult]
+on juvenile.member_no = adult.member_no
 --------------------------------------------------------------------------------------
