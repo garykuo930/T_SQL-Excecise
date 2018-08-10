@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# SQL Server Management Studio Solution File, Format Version 12.00
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "T_SQL Excecise", "T_SQL Excecise\T_SQL Excecise.ssmssqlproj", "{3CAB87A7-8B40-4926-B057-F3DFE8BF0BB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CAB87A7-8B40-4926-B057-F3DFE8BF0BB9}.Default|Default.ActiveCfg = Default
+		{AE538DF2-0C03-415C-BF0A-6F8BF13D2AD7}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
