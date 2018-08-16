@@ -137,12 +137,12 @@ Go
 --Use the LOWER function to return the result in lowercase characters.
 --Use the addition (+) operator to concatenate the character strings
 --------------------------------------------------------------------------------------
+use Library
 
 select lower([firstname]+[middleinitial]+substring([lastname],1,2)) as 'e-mail'
 from [dbo].[member]
 where lastname = 'Anderson'
 Go
-
 --------------------------------------------------------------------------------------
 --Exercise 4.
 --Format the result set of a query for readability by using the CONVERT function and string literals. 
